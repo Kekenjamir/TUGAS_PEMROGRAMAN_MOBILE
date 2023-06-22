@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2196f3" />
+    <title>My F7 App</title>
+
+    <link rel="stylesheet" href="aset/framework7-bundle.min.css" />
+    <link rel="stylesheet" href="aset/app.css" />
+    <link rel="stylesheet" href="aset/framework7-icons.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!--  -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name-->
+        <div data-name="home" class="page">
+          <!-- Top Navbar-->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Simple CRUD Framework7</div>
+            </div>
+          </div>
+
+          <!-- Bottom Toolbar-->
+          <div class="toolbar tabbar tabbar-labels toolbar-bottom color-theme-green">
+            <div class="toolbar-inner">
+              <a href="#tab-4" class="tab-link tav-link-active">
+                <i class="f7-icons">house</i>
+                <span class="tabbar-label color-thame-green">Home</span>
+              </a>
+              <a href="#tab-6" class="tab-link">
+                <i class="icon f7-icons">dot_radiowaves_left_right</i>
+                <span class="tabbar-label color-thame-red">Informasi</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block-title"><a href="/mapel/" class="col button button-outline color-theme-green">Tambah Jadwal</a></div>
+            <div class="block">
+              <div class="data-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>No.</th>
+                      <th>Nama Mapel</th>
+                      <th>Kode Mapel</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tampil"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- page stacked -->
+        <!-- Mapel-->
+        <div data-name="mapel" class="page stacked">
+          <!-- navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Tambah Mapel</div>
+            </div>
+          </div>
+
+          <!-- toolbar -->
+          <div class="toolbar tabbar tabbar-labels toolbar-bottom color-theme-green">
+            <div class="toolbar-inner">
+              <a href="#tab-4" class="tab-link tab-link-active">
+                <i class="f7-icons">House</i>
+                <span class="tabbar-label color-theme-green">Home</span>
+              </a>
+              <a href="#tab-6" class="tab-link">
+                <i class="f7-icons">dot_radiowaves_left_right</i>
+                <span class="tabbar-label color-theme-green">Informasi</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Page Content -->
+          <div class="page-content">
+            <div class="block">
+              <form class="list" id="my-form">
+                <ul>
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Kode Mapel</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="kode_mapel" placeholder="Kode Mapel" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item inner">
+                        <div class="item-title item-label">Nama Mapel</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="nama_mapel" placeholder="Mata Pelajaran" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+              <div class="block block-strong row">
+                <div class="col">
+                  <a class="col button button-outline color-theme-green" href="#" id="tambah">Tambah Mapel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Update-->
+        <div data-name="update" class="page stacked">
+          <!-- navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Update Mapel</div>
+            </div>
+          </div>
+
+          <!-- toolbar -->
+          <div class="toolbar tabbar tabbar-labels toolbar-bottom color-theme-green">
+            <div class="toolbar-inner">
+              <a href="#tab-4" class="tab-link tab-link-active">
+                <i class="f7-icons">house</i>
+                <span class="tabbar-label color-theme-green">Home</span>
+              </a>
+              <a href="#tab-6" class="tab-link">
+                <i class="icon f7-icons">dot_radiowaves_left_right</i>
+                <span class="tabbar-label color-theme-green">Informasi</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Page Content -->
+          <div class="page-content">
+            <div class="block">
+              <form class="list" id="my-form">
+                <ul>
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Kode Mapel</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="kd_mapel_e" placeholder="Kode Mapel" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        <div class="item-title item-label">Nama Mapel</div>
+                        <div class="item-input-wrap">
+                          <input type="text" id="nama_mapel_e" placeholder="Mata Pelajaran" />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </form>
+              <div class="block block-strong row">
+                <div class="col">
+                  <a class="col button button-outline color-theme-green" href="#" id="update"> Update Mapel </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- App root element-->
+
+    <div>
+      <script type="text/javascript" src="aset/framework7-bundle.min.js"></script>
+      <script type="text/javascript" src="aset/my-app.js"></script>
+    </div>
+  </body>
+</html>

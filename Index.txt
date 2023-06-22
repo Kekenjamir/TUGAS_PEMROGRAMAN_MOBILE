@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My F7 App</title>
+
+    <link rel="stylesheet" href="aset/framework7-bundle.min.css" />
+  </head>
+  <body>
+    <div id="app" class="views">
+      <!-- App root element-->
+
+      <!-- Your Main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name-->
+        <div data-name="home" class="page">
+          <!-- Top Navbar-->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Awesome F7 App</div>
+            </div>
+          </div>
+
+          <!-- Bottom Toolbar-->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+              <!-- Toolbar Links-->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <p>Page Content goes here</p>
+            <!-- Link to another page-->
+            <a href="/about/">About App</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- App root element-->
+
+    <script type="text/javascript" src="aset/framework7-bundle.min.js"></script>
+
+    <script>
+      var app = new Framework7({
+        el: '#app',
+        name: 'My App',
+        id: 'com.rk4d.f7.pertama',
+        panel: {
+          swipe: true,
+        },
+        routes: [
+          {
+            path: '/about/',
+            url: 'about.html',
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
